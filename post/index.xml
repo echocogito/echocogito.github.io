@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>JVM</title>
+      <link>https://echocogito.github.io/post/jvm/</link>
+      <pubDate>Sun, 30 Oct 2022 18:58:00 +0800</pubDate>
+      
+      <guid>https://echocogito.github.io/post/jvm/</guid>
+      <description>一、JVM是一种规范 JVM概述 JVM：Java Virtual Machine，也就是Java虚拟机 所谓虚拟机是指：通过软件模拟的具有完整硬件系统功能的、运</description>
+    </item>
+    
+    <item>
       <title>Postgresql使用</title>
       <link>https://echocogito.github.io/post/postgresql%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Sun, 30 Oct 2022 18:58:00 +0800</pubDate>
