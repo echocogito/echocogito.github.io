@@ -6,9 +6,28 @@
     <description>Recent content in Tags on Scavenger Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 30 Oct 2022 18:58:00 +0800</lastBuildDate>
     
 	<atom:link href="https://echocogito.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>django</title>
+      <link>https://echocogito.github.io/tags/django/</link>
+      <pubDate>Sun, 30 Oct 2022 18:58:00 +0800</pubDate>
+      
+      <guid>https://echocogito.github.io/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://echocogito.github.io/tags/python/</link>
+      <pubDate>Sun, 30 Oct 2022 18:58:00 +0800</pubDate>
+      
+      <guid>https://echocogito.github.io/tags/python/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
