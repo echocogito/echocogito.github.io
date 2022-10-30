@@ -15,9 +15,9 @@
     
 
     
-    <meta name="title" content="git使用指南" />
-    <meta property="og:title" content="git使用指南" />
-    <meta property="twitter:title" content="git使用指南" />
+    <meta name="title" content="Postgresql使用" />
+    <meta property="og:title" content="Postgresql使用" />
+    <meta property="twitter:title" content="Postgresql使用" />
     
 
     
@@ -34,9 +34,9 @@
     <meta name="keyword"  content="JAVA,PYTHON,GOLANG,VUE.js">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
-    <title>git使用指南 | 拾荒者博客</title>
+    <title>Postgresql使用 | 拾荒者博客</title>
 
-    <link rel="canonical" href="/post/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+    <link rel="canonical" href="/post/postgresql%E4%BD%BF%E7%94%A8/">
 
     
     
@@ -165,16 +165,16 @@
                     <div class="tags">
                         
                     </div>
-                    <h1>git使用指南</h1>
-                    <h2 class="subheading">How to set up this theme</h2>
+                    <h1>Postgresql使用</h1>
+                    <h2 class="subheading"></h2>
                     <span class="meta">
                         
                             Posted by 
                             
-                                Noper
+                                    Scavenger Blog
                              
                             on 
-                            Saturday, September 12, 2020
+                            Sunday, October 30, 2022
                             
                             
                             
@@ -200,116 +200,7 @@
                 post-container">
 
                 
-                <h2 id="git">Git</h2>
-<p>查看是否安装了git</p>
-<pre><code>$ git
-</code></pre><p>linux(乌班图）下安装git</p>
-<pre><code>$ sudo apt-get install git
-</code></pre><p>身份设置</p>
-<pre><code>$ git config --global user.name &quot;Your Name&quot;
-$ git config --global user.email &quot;email@example.com&quot;
-</code></pre><p><code>--global</code>参数表示你这台机器上所有的Git仓库都会使用这个配置，当然也可以对某个仓库指定不同的用户名和Email地址。</p>
-<p>创建一个空目录，用于存放版本库</p>
-<pre><code>$ mkdir learngit
-$ cd learngit
-$ pwd
-/Users/ethon/learngit
-</code></pre><p>版本库又名仓库，英文名<strong>repository</strong>，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。</p>
-<p>初始化仓库</p>
-<pre><code>$ git init
-</code></pre><p>把文件添加到仓库</p>
-<pre><code>$ git add &lt;file&gt;
-</code></pre><p>把文件提交到仓库</p>
-<pre><code>$ git commit -m &lt;comment&gt;
-</code></pre><p><code>-m</code>后面输入的是本次提交的说明，可以输入任意内容，当然最好是有意义的，这样你就能从历史记录里方便地找到改动记录。</p>
-<p><code>commit</code>可以一次提交很多文件，所以你可以多次<code>add</code>不同的文件</p>
-<p>查看状态</p>
-<pre><code>$ git status
-</code></pre><p><code>git status</code>命令可以让我们时刻掌握仓库当前的状态</p>
-<p>查看具体有什么差别</p>
-<pre><code>$ git diff &lt;file&gt;
-
-</code></pre><p>如果<code>git status</code>告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容。<code>git diff</code>顾名思义就是查看difference，显示的格式正是Unix通用的diff格式</p>
-<p>对比本地仓库和工作区</p>
-<pre><code>$ git diff HEAD -- &lt;文件名&gt;
-
-</code></pre><p>对比本地仓库个版本代码</p>
-<pre><code>$ git diff HEAD HEAD^ -- &lt;文件名&gt;
-
-</code></pre><p>查看历史记录</p>
-<pre><code>$ git log
-$ git log --pretty=oneline
-$ git log --oneline
-$ git reflog
-
-</code></pre><p><code>git log</code>命令显示从最近到最远的提交日志</p>
-<p>如果嫌输出信息太多，看得眼花缭乱的，可以试试加上<code>--pretty=oneline</code>参数</p>
-<blockquote>
-<p>需要友情提示的是，你看到的一大串类似<code>1094adb...</code>的是<code>commit id</code>（版本号），和SVN不一样，Git的<code>commit id</code>不是1，2，3……递增的数字，而是一个SHA1计算出来的一个非常大的数字，用十六进制表示，而且你看到的<code>commit id</code>和我的肯定不一样，以你自己的为准。为什么<code>commit id</code>需要用这么一大串数字表示呢？因为Git是分布式的版本控制系统，后面我们还要研究多人在同一个版本库里工作，如果大家都用1，2，3……作为版本号，那肯定就冲突了。</p>
-</blockquote>
-<p>版本回退(退回旧版)</p>
-<pre><code>$ git reset --hard HEAD^
-
-</code></pre><p>首先，Git必须知道当前版本是哪个版本，在Git中，用<code>HEAD</code>表示当前版本，也就是最新的提交<code>1094adb...</code>（注意我的提交ID和你的肯定不一样），上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，当然往上100个版本写100个<code>^</code>比较容易数不过来，所以写成<code>HEAD~100</code>。</p>
-<p>版本回退(退回原版)</p>
-<pre><code>$ git reset --hard 1094a
-
-</code></pre><p>最新的那个版本<code>append GPL</code>已经看不到了！好比你从21世纪坐时光穿梭机来到了19世纪，想再回去已经回不去了，肿么办？</p>
-<p>办法其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个<code>append GPL</code>的<code>commit id</code>是<code>1094adb...</code>，于是就可以指定回到未来的某个版本</p>
-<p>版本号没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。</p>
-<p>从缓存区撤销到工作区</p>
-<pre><code>$ git reset --head &lt;文件名&gt;
-
-</code></pre><p>撤销对工作区文件的修改</p>
-<pre><code>$ git checkout -- &lt;文件名&gt;
-
-</code></pre><p>命令<code>git checkout -- readme.txt</code>意思就是，把<code>readme.txt</code>文件在工作区的修改全部撤销，这里有两种情况：</p>
-<p>一种是<code>readme.txt</code>自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</p>
-<p>一种是<code>readme.txt</code>已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
-<p>删除文件</p>
-<pre><code>$ git rm &lt;file&gt;
-$ git commit -m &lt;comment&gt;
-
-</code></pre><p>误删文件还原</p>
-<pre><code>$ git checkout -- &lt;file&gt;
-
-</code></pre><p><code>git checkout</code>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。从来没有被添加到版本库就被删除的文件，是无法恢复的！</p>
-<p>添加远程空仓库到本地</p>
-<pre><code>$ git remote add origin git@github.com:xxx/xxxx
-
-</code></pre><p>远程库的名字就是<code>origin</code>，这是Git默认的叫法，也可以改成别的，但是<code>origin</code>这个名字一看就知道是远程库。</p>
-<p>j将本地仓库类容添加到远程仓库</p>
-<pre><code>$ git push -u origin master
-
-</code></pre><p>把本地库的内容推送到远程，用<code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。</p>
-<p>由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送的远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
-<p>强行推至远程仓库</p>
-<pre><code>$ git push -F origin master
-
-</code></pre><p>克隆远程已存在的仓库</p>
-<pre><code>$ git clone git@github.com:xxx/xxx
-
-</code></pre><p>新建并切换分支</p>
-<pre><code>$ git checkout -b &lt;分支名&gt;
-
-</code></pre><p><code>git checkout</code>命令加上<code>-b</code>参数表示创建并切换，相当于以下两条命令：</p>
-<pre><code>$ git branch &lt;分支名&gt;
-$ git checkout &lt;分支名&gt;
-
-</code></pre><p>切换分支</p>
-<pre><code>$ git checkout &lt;分支名&gt;
-
-</code></pre><p>查看当前分支</p>
-<pre><code>$ git branch
-
-</code></pre><p><code>git branch</code>命令会列出所有分支，当前分支前面会标一个<code>*</code>号</p>
-<p>将指定分支合并到当前分支</p>
-<pre><code>$ git merge &lt;分支名&gt;
-
-</code></pre><p>删除指定分支</p>
-<pre><code>$ git branch -d &lt;分支名&gt;
-
-</code></pre>
+                
 
                 
 
@@ -317,11 +208,11 @@ $ git checkout &lt;分支名&gt;
                 <hr>
                 <ul class="pager">
                     
-                    
-                    <li class="next">
-                        <a href="/post/postgresql%E4%BD%BF%E7%94%A8/" data-toggle="tooltip" data-placement="top" title="Postgresql使用">Next
-                            Post &rarr;</a>
+                    <li class="previous">
+                        <a href="/post/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" data-toggle="tooltip" data-placement="top" title="git使用指南">&larr;
+                            Previous Post</a>
                     </li>
+                    
                     
                 </ul>
                 
