@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PROGRAMMING on Scavenger Blog</title>
+    <link>https://echocogito.github.io/categories/programming/</link>
+    <description>Recent content in PROGRAMMING on Scavenger Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Sep 2020 14:59:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://echocogito.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>git使用指南</title>
+      <link>https://echocogito.github.io/post/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Sat, 12 Sep 2020 14:59:22 +0800</pubDate>
+      
+      <guid>https://echocogito.github.io/post/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+      <description>Git 查看是否安装了git $ git linux(乌班图）下安装git $ sudo apt-get install git 身份设置 $ git config --global user.name &amp;quot;Your Name&amp;quot; $ git config --global user.email &amp;quot;email@example.com&amp;quot; --global参数表示你这台机器上所</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -18,6 +18,16 @@
   </url>
   
   <url>
+    <loc>https://echocogito.github.io/post/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</loc>
+    <lastmod>2022-10-30T18:58:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://echocogito.github.io/tags/juc/</loc>
+    <lastmod>2022-10-30T18:58:00+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://echocogito.github.io/post/jvm/</loc>
     <lastmod>2022-10-30T18:58:00+08:00</lastmod>
   </url>
@@ -59,6 +69,11 @@
   
   <url>
     <loc>https://echocogito.github.io/post/git%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</loc>
+    <lastmod>2020-09-12T14:59:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://echocogito.github.io/categories/programming/</loc>
     <lastmod>2020-09-12T14:59:22+08:00</lastmod>
   </url>
   

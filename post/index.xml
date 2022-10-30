@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Java并发编程</title>
+      <link>https://echocogito.github.io/post/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sun, 30 Oct 2022 18:58:00 +0800</pubDate>
+      
+      <guid>https://echocogito.github.io/post/java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B/</guid>
+      <description>绪论 Java并发编程全景图 并发编程的三个核心问题：分工、同步、互斥 所谓分工指的是如何高效地拆解任务并分配给线程，而同步指的是线程之间如何协作</description>
+    </item>
+    
+    <item>
       <title>JVM</title>
       <link>https://echocogito.github.io/post/jvm/</link>
       <pubDate>Sun, 30 Oct 2022 18:58:00 +0800</pubDate>
