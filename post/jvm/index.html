@@ -233,7 +233,7 @@
 <li>这个“一般机器”可用软件模拟并运行于各种现存的计算机系统，也可用硬件来实现</li>
 </ul>
 <p>
-  <img src="img/JVM/image-20210811172645279.png" alt="image-20210811172645279">
+  <img src="/img/JVM/image-20210811172645279.png" alt="image-20210811172645279">
 
 </p>
 <h3 id="jvm规范定义的主要主要内容">JVM规范定义的主要主要内容</h3>
@@ -271,11 +271,11 @@
 <p>HotSpot VM</p>
 <h2 id="二jvm体系结构概览">二、JVM体系结构概览</h2>
 <p>
-  <img src="img/JVM/image-20210811174514933.png" alt="image-20210811174514933">
+  <img src="/img/JVM/image-20210811174514933.png" alt="image-20210811174514933">
 
 </p>
 <p>
-  <img src="img/JVM/image-20210817202826718.png" alt="image-20210817202826718">
+  <img src="/img/JVM/image-20210817202826718.png" alt="image-20210817202826718">
 
 </p>
 <p>
@@ -284,17 +284,17 @@
 </p>
 <p>首先要执行的代码是：</p>
 <p>
-  <img src="img/JVM/image-20210818132349183.png" alt="image-20210818132349183">
+  <img src="/img/JVM/image-20210818132349183.png" alt="image-20210818132349183">
 
 </p>
 <p>先执行main方法：</p>
 <p>
-  <img src="img/JVM/image-20210818132416197.png" alt="image-20210818132416197">
+  <img src="/img/JVM/image-20210818132416197.png" alt="image-20210818132416197">
 
 </p>
 <p>当要调用其他方法时：</p>
 <p>
-  <img src="img/JVM/image-20210818132442379.png" alt="image-20210818132442379">
+  <img src="/img/JVM/image-20210818132442379.png" alt="image-20210818132442379">
 
 </p>
 <pre><code>Student s = new Student(&quot;小明&quot;，18);
@@ -327,7 +327,7 @@ Student 类的信息存放在方法区。
 </ul>
 <h3 id="类的生命周期">类的生命周期</h3>
 <p>
-  <img src="img/JVM/image-20210812104533846.png" alt="image-20210812104533846">
+  <img src="/img/JVM/image-20210812104533846.png" alt="image-20210812104533846">
 
 </p>
 <p>其中类加载的过程包括了加载、验证、准备、解析、初始化五个阶段。在这五个阶段中，加载、验证、准备和初始化这四个阶段发生的顺序是确定的，而解析阶段则不一定，它在某些情况下可以在初始化阶段之后开始，这是为了支持Java语言的运行时绑定（也成为动态绑定或晚期绑定）。另外注意这里的几个阶段是按顺序开始，而不是按顺序进行或完成，因为这些阶段通常都是互相交叉地混合进行的，通常在一个阶段执行的过程中调用或激活另一个阶段。</p>
@@ -420,7 +420,7 @@ null
 </code></pre><p>从上面的结果可以看出，并没有获取到 <code>ExtClassLoader</code>的父Loader，原因是 <code>BootstrapLoader</code>（引导类加载器）是用C语言实现的，找不到一个确定的返回父Loader的方式，于是就返回null。</p>
 <h3 id="类加载器18">类加载器（1.8）</h3>
 <p>
-  <img src="img/JVM/image-20210811174832468.png" alt="image-20210811174832468">
+  <img src="/img/JVM/image-20210811174832468.png" alt="image-20210811174832468">
 
 </p>
 <blockquote>
@@ -428,7 +428,7 @@ null
 </blockquote>
 <h3 id="类加载器17">类加载器（1.7）</h3>
 <p>
-  <img src="img/JVM/image-20210811175040260.png" alt="image-20210811175040260">
+  <img src="/img/JVM/image-20210811175040260.png" alt="image-20210811175040260">
 
 </p>
 <h3 id="类加载器说明">类加载器说明</h3>
@@ -466,7 +466,7 @@ Java 程序不能直接引用启动类加载器，直接设置 classLoader 为 n
 <li><strong>缓存机制</strong>，缓存机制将会保证所有加载过的Class都会被缓存，当程序中需要使用某个Class时，类加载器先从缓存区寻找该Class，只有缓存区不存在，系统才会读取该类对应的二进制数据，并将其转换成Class对象，存入缓存区。这就是为什么修改了Class后，必须重启JVM，程序的修改才会生效</li>
 </ul>
 <p>
-  <img src="img/JVM/image-20210812111421409.png" alt="image-20210812111421409">
+  <img src="/img/JVM/image-20210812111421409.png" alt="image-20210812111421409">
 
 </p>
 <p>分别切换加载方式，会有不同的输出结果。</p>
@@ -488,7 +488,7 @@ Java 程序不能直接引用启动类加载器，直接设置 classLoader 为 n
 </ul>
 <p>ClassLoader源码分析</p>
 <p>
-  <img src="img/JVM/image-20210812111743995.png" alt="image-20210812111743995">
+  <img src="/img/JVM/image-20210812111743995.png" alt="image-20210812111743995">
 
 </p>
 <h3 id="自定义类加载器">自定义类加载器</h3>
@@ -502,7 +502,7 @@ Class文件格式里面只有两种类型：无符号数、表
 <h3 id="类加载子系统">类加载子系统</h3>
 <p>(1)根据给定的全限定名类名(如java.lang.Object)来装载class文件的内容到Runtimedataarea中的methodarea(方法区域)。Java程序员可以extends java.lang.ClassLoader类来写自己的Classloader。(2) 对（1）中的加载过程是：当一个classloader启动时，classloader的生存地点在jvm中的堆，然后它去主机硬盘上去装载A.class到jvm的methodarea(方法区),方法区中的这个字节文件会被虚拟机拿来new A字节码，然后在堆内存生成了一个A字节码的对象，然后A自己码这个内存文件有两个引用，一个指向A的class对象，一个指向加载自己的classloader。见下图：
 
-  <img src="img/JVM/image-20210818124648317.png" alt="image-20210818124648317">
+  <img src="/img/JVM/image-20210818124648317.png" alt="image-20210818124648317">
 
 </p>
 <h2 id="四java堆heap">四、Java堆（Heap)</h2>
@@ -780,7 +780,7 @@ OutOfMemoryError：如果虚拟机栈可以动态扩展，而扩展时无法申�
 <li>栈帧是一个内存区块，是一个数据集，维系着方法执行过程中的各种数据信息。</li>
 </ul>
 <p>
-  <img src="img/JVM/image-20210818123418049.png" alt="image-20210818123418049">
+  <img src="/img/JVM/image-20210818123418049.png" alt="image-20210818123418049">
 
 </p>
 <p>2.1栈运行原理</p>
@@ -1011,7 +1011,7 @@ Just In Time Compiler：就是虚拟机将源代码直接编译成和本地平�
 <p>AOT编译器
 Ahead Of Time Compiler 在程序运行之前，便将字节码转换为机器码的过程。
 
-  <img src="img/JVM/image-20210818124944652.png" alt="image-20210818124944652">
+  <img src="/img/JVM/image-20210818124944652.png" alt="image-20210818124944652">
 
 </p>
 <p>解释器：一条一条地读取，解释并且执行字节码指令。因为它一条一条地解释和执行指令，所以它可以很快地解释字节码，但是执行起来会比较慢。这是解释执行的语言的一个缺点。字节码这种“语言”基本来说是解释执行的。
@@ -1021,7 +1021,7 @@ Ahead Of Time Compiler 在程序运行之前，便将字节码转换为机器码
 原文链接：https://blog.csdn.net/csdnliuxin123524/article/details/81303711</p>
 <h2 id="九jvm调优">九、JVM调优</h2>
 <p>
-  <img src="img/JVM/image-20210812112303430.png" alt="image-20210812112303430">
+  <img src="/img/JVM/image-20210812112303430.png" alt="image-20210812112303430">
 
 </p>
 <p>控制参数</p>
@@ -1056,13 +1056,13 @@ Ahead Of Time Compiler 在程序运行之前，便将字节码转换为机器码
 <p>通过句柄访问</p>
 <p>Java 堆中会分配一块内存作为句柄池。reference 存储的是句柄地址。详情见图。</p>
 <p>
-  <img src="img/JVM/image-20210817204911163.png" alt="image-20210817204911163">
+  <img src="/img/JVM/image-20210817204911163.png" alt="image-20210817204911163">
 
 </p>
 <p>使用直接指针访问</p>
 <p>reference 中直接存储对象地址</p>
 <p>
-  <img src="img/JVM/image-20210817205020452.png" alt="image-20210817205020452">
+  <img src="/img/JVM/image-20210817205020452.png" alt="image-20210817205020452">
 
 </p>
 <p>比较：使用句柄的最大好处是 reference 中存储的是稳定的句柄地址，在对象移动(GC)是只改变实例数据指针地址，reference 自身不需要修改。直接指针访问的最大好处是速度快，节省了一次指针定位的时间开销。如果是对象频繁 GC 那么句柄方法好，如果是对象频繁访问则直接指针访问好。</p>
@@ -1121,7 +1121,7 @@ Ahead Of Time Compiler 在程序运行之前，便将字节码转换为机器码
 <h2 id="十二垃圾回收器">十二、垃圾回收器</h2>
 <p>收集算法是内存回收的理论，而垃圾回收器是内存回收的实践。</p>
 <p>
-  <img src="img/JVM/image-20210817211707214.png" alt="image-20210817211707214">
+  <img src="/img/JVM/image-20210817211707214.png" alt="image-20210817211707214">
 
 </p>
 <p>说明：如果两个收集器之间存在连线说明他们之间可以搭配使用。</p>
@@ -1132,7 +1132,7 @@ Ahead Of Time Compiler 在程序运行之前，便将字节码转换为机器码
 
 </p>
 <p>
-  <img src="img/JVM/image-20210818113805259.png" alt="image-20210818113805259">
+  <img src="/img/JVM/image-20210818113805259.png" alt="image-20210818113805259">
 
 </p>
 <h2 id="十三stringtable">十三、StringTable</h2>
